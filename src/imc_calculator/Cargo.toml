@@ -1,0 +1,8 @@
+[package]
+name = "imc_calculator"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "imc_calculator"
+path = "src/main.rs"
