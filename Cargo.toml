@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-imc_calculator = { path = "src/imc_calculator" }
+bmi_calculator = { path = "src/bmi_calculator" }
 tools = { path = "src/tools" }
