@@ -7,6 +7,6 @@ fn main() {
     match input {
         1 => println!("Infinite Calculator"),
         2 => bmi_calculator::main(),
-        n => println!("T'es le roi des CONNARDS !!!!!!!"),
+        _n => println!("T'es le roi des CONNARDS !!!!!!!"),
     }
 }
