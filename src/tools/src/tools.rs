@@ -5,7 +5,7 @@ fn type_of<T>(_: T) -> &'static str {
     type_name::<T>()
 }
 
-pub fn read_u8() {
+pub fn mainInputChecker() {
     let mut input = String::new();
 
     let input = match io::stdin().read_line(&mut input) {
@@ -20,7 +20,7 @@ pub fn read_u8() {
     println!("{}", type_of("jakigeon"));  // -> &str
     // step to convert "input" into String
 
-    let input = "9";
+    //let input = "9";
     let input = match input.trim().parse::<i32>() {
         Ok(_) => println!("top"),
         Err(error) => println!("NaN : {}", error),
