@@ -1,9 +1,4 @@
 use std::io;
-use std::any::type_name;
-
-fn type_of<T>(_: T) -> &'static str {
-    type_name::<T>()
-}
 
 pub fn main_input_checker() -> i32 {
     // Init input variable
@@ -11,17 +6,16 @@ pub fn main_input_checker() -> i32 {
 
     // Display input
     match io::stdin().read_line(&mut input_string) {
-        Ok(_) => { let input_string = input_string.trim(); },
+        Ok(_) => {},
         Err(error) => println!("error: {}", error),
     };
 
     // Step to convert input to Integer
     let mut input_number: i32 = 0;
     match input_string.trim().parse::<i32>() {
-        Ok(_) => { let input_number: i32 = input_string.trim().parse::<i32>().unwrap(); },
+        Ok(_) => { input_number = input_string.trim().parse::<i32>().unwrap(); },
         Err(error) => {
             println!("Not a Number : {}", error);
-            return 0;
         },
     };
 
