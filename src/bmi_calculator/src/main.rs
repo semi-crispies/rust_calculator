@@ -4,7 +4,8 @@ pub fn main() {
     println!("Welcome into the Body Mass Index Calculator");
     let weight = weight();
     let height = height();
-    println!("Your Body Mass Index is {}", weight / (height * height));
+    let bmi = body_mass_index_calculator(weight, height);
+    println!("Your Body Mass Index is {}", bmi);
 }
 
 fn weight() -> f32 {
@@ -19,4 +20,8 @@ fn height() -> f32 {
     let height = tools::read_f32();
     println!("{} m", height);
     return height;
+}
+
+fn body_mass_index_calculator(weight: f32, height: f32) -> f32 {
+    return weight / ( height * height );
 }
