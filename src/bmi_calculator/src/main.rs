@@ -5,7 +5,7 @@ pub fn main() {
     let weight = weight();
     let height = height();
     let bmi = body_mass_index_calculator(weight, height);
-    println!("Your Body Mass Index is {}", bmi);
+    println!("Your Body Mass Index is {:.1}", bmi);
 }
 
 fn weight() -> f32 {
