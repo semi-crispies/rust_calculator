@@ -16,9 +16,13 @@ fn weight() -> f32 {
 }
 
 fn height() -> f32 {
-    println!("What is your height in meter (ex: 1.8 for 1meter80) ?");
-    let height = tools::read_f32();
-    println!("{} m", height);
+    let mut height = 0.0;
+    while height < 1.0 || height > 3.0 {
+        println!("Your height (in meter) must be between 1 meter and 3 meter ");
+        println!("What is your height in meter (ex: 1.8 for 1meter80) ?");
+        height = tools::read_f32();
+        println!("{} m", height);
+        }
     return height;
 }
 
