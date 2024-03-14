@@ -1,7 +1,8 @@
 extern crate tools;
+use colored::Colorize;
 
 pub fn main() {
-    println!("Welcome into the Body Mass Index Calculator");
+    println!("{}", "Welcome into the Body Mass Index Calculator".bold().yellow());
     let weight = weight();
     let height = height();
     let bmi = body_mass_index_calculator(weight, height);

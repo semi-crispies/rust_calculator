@@ -9,3 +9,4 @@ path = "src/main.rs"
 
 [dependencies]
 tools = { path = "../tools" }
+colored = "2.1.0"
