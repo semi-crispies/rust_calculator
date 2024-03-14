@@ -3,27 +3,30 @@ use colored::Colorize;
 
 pub fn main() {
     println!("{}", "Welcome into the Body Mass Index Calculator".bold().yellow());
-    let weight = weight();
-    let height = height();
-    let bmi = body_mass_index_calculator(weight, height);
-    println!("Your Body Mass Index is {:.1}", bmi);
+    let weight: f32 = weight();
+    let height: f32 = height();
+    let bmi: f32 = body_mass_index_calculator(weight, height);
+    println!(" - WEIGHT: {} kg\n - HEIGHT: {} m", weight , height);
+    println!("Your Body Mass Index is {:.4}", bmi.to_string().bold().yellow());
 }
 
 fn weight() -> f32 {
-    println!("What is your weight in kg with decimal (ex: 70.0 for 70kg) ?");
-    let weight = tools::read_f32();
-    println!("{} kg", weight);
+    let mut weight = 0.0;
+    while weight < 50.0 || weight > 200.0 {
+        println!(" - What is your {} in kg (ex: 70.5 for 70.5kg) ?", "WEIGHT".yellow());
+        println!("{}", " * Your weight (in kilogram) must be between 50.0 and 200.0".red());
+        weight = tools::read_f32();
+    }
     return weight;
 }
 
 fn height() -> f32 {
     let mut height = 0.0;
     while height < 1.0 || height > 3.0 {
-        println!("Your height (in meter) must be between 1 meter and 3 meter ");
-        println!("What is your height in meter (ex: 1.8 for 1meter80) ?");
+        println!(" - What is your {} in meter (ex: 1.8 for 1meter80) ?", "HEIGHT".yellow());
+        println!("{}", " * Your height (in meter) must be between 1.0 and 3.0".red());
         height = tools::read_f32();
-        println!("{} m", height);
-        }
+    }
     return height;
 }
 
