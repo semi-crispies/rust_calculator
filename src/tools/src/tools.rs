@@ -19,10 +19,6 @@ pub fn main_input_checker() -> i32 {
         },
     };
 
-    // Step to compare VALID_NUMBER with user input value
-    const VALID_NUMBER: [i32; 2] = [1, 2];
-    if !VALID_NUMBER.contains(&input_number) { println!("Wrong number, try a valid number, please..."); };
-
     // If everything ok RETURN input_number
     input_number
 }
