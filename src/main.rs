@@ -1,8 +1,9 @@
 extern crate tools;
 extern crate bmi_calculator;
+use colored::Colorize;
 
 fn main() {
-    println!("What do you want?\n 1. Infinite Calculator\n 2. IMC Calculator");
+    println!("{}\n {} Infinite Calculator\n {} IMC Calculator", "What do you want?".bold(), "1.".yellow(), "2.".yellow());
     // Init "input" variable to 0 at start
     let mut input: i32 = 0;
     // Step to compare VALID_NUMBER with user input value
