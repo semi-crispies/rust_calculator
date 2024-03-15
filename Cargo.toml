@@ -5,5 +5,6 @@ edition = "2021"
 
 [dependencies]
 bmi_calculator = { path = "src/bmi_calculator" }
+infinite_calculator = { path = "src/infinite_calculator" }
 tools = { path = "src/tools" }
 colored = "2.1.0"

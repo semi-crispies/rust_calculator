@@ -1,5 +1,6 @@
 extern crate tools;
 extern crate bmi_calculator;
+extern crate infinite_calculator;
 use colored::Colorize;
 
 fn main() {
@@ -10,7 +11,7 @@ fn main() {
     while !VALID_NUMBER.contains(&input) {
         input = tools::input_checker_i32();
         match input {
-            1 => println!("Infinite Calculator"),
+            1 => infinite_calculator::main(),
             2 => bmi_calculator::main(),
             _n => println!("Please, specify your request"),
         };
