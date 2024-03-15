@@ -8,6 +8,7 @@ pub fn main() {
     let bmi: f32 = body_mass_index_calculator(weight, height);
     println!(" - WEIGHT: {} kg\n - HEIGHT: {} m", weight , height);
     println!("Your Body Mass Index is {:.4}", bmi.to_string().bold().yellow());
+    body_mass_index_interpretation(bmi);
 }
 
 fn weight() -> f32 {
@@ -32,4 +33,12 @@ fn height() -> f32 {
 
 fn body_mass_index_calculator(weight: f32, height: f32) -> f32 {
     return weight / ( height * height );
+}
+
+fn body_mass_index_interpretation(bmi: f32) -> () {
+    if bmi < 18.4 { println!("GO EAT, YOU TWIG"); }
+    else if bmi > 18.5 && bmi < 24.9 { println!("Nice, respect your body"); }
+    else if bmi > 25.0 && bmi < 29.9 { println!("EAT SALAD!!!"); }
+    else if bmi > 30.0 && bmi < 39.9 { println!("For your own good, go for a run"); }
+    else if bmi > 40.0 { println!("Stop KFC WESH"); }
 }
