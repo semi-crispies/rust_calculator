@@ -6,7 +6,6 @@ fn main() {
     // Init "input" variable to 0 at start
     let mut input: i32 = 0;
     // Step to compare VALID_NUMBER with user input value
-    const VALID_NUMBER: [i32; 2] = [1, 2];
     while !VALID_NUMBER.contains(&input) {
         input = tools::input_checker_i32();
         match input {
@@ -16,3 +15,5 @@ fn main() {
         };
     };
 }
+
+const VALID_NUMBER: [i32; 2] = [1, 2];
