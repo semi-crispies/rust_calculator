@@ -13,9 +13,9 @@ pub fn main() {
 
 fn weight() -> f32 {
     let mut weight: f32 = 0.0;
-    while weight < 50.0 || weight > 200.0 {
+    while weight < 40.0 || weight > 200.0 {
         println!(" - What is your {} in kg (ex: 70.5 for 70.5kg) ?", "WEIGHT".yellow());
-        println!("{}", " * Your weight (in kilogram) must be between 50.0 and 200.0".red());
+        println!("{}", " * Your weight (in kilogram) must be between 40.0 and 200.0".red());
         weight = tools::input_checker_f32();
     }
     return weight;
@@ -23,9 +23,9 @@ fn weight() -> f32 {
 
 fn height() -> f32 {
     let mut height: f32 = 0.0;
-    while height < 1.0 || height > 3.0 {
+    while height < 1.0 || height > 2.5 {
         println!(" - What is your {} in meter (ex: 1.8 for 1meter80) ?", "HEIGHT".yellow());
-        println!("{}", " * Your height (in meter) must be between 1.0 and 3.0".red());
+        println!("{}", " * Your height (in meter) must be between 1.0 and 2.5".red());
         height = tools::input_checker_f32();
     }
     return height;
