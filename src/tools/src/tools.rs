@@ -24,12 +24,12 @@ pub fn input_checker_i32() -> i32 {
 }
 
 pub fn input_checker_f32() -> f32 {
-    // Init input variable
+    // Init input variable as a String
     let mut input_string = String::new();
 
-    // Display input
+    // Display input and replace "," by "." if Ok
     match io::stdin().read_line(&mut input_string) {
-        Ok(_) => {},
+        Ok(_) => { input_string = input_string.replace(",", "."); },
         Err(error) => println!("error: {}", error),
     };
 
