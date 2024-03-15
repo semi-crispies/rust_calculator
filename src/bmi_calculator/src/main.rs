@@ -17,6 +17,7 @@ fn weight() -> f32 {
         println!(" - What is your {} in kg (ex: 70.5 for 70.5kg) ?", "WEIGHT".yellow());
         println!("{}", " * Your weight (in kilogram) must be between 40.0 and 200.0".red());
         weight = tools::input_checker_f32();
+        if weight < 40.0 || weight > 200.0 { println!("{}", "Please, enter a valid weight...".red()); };
     }
     return weight;
 }
@@ -27,6 +28,7 @@ fn height() -> f32 {
         println!(" - What is your {} in meter (ex: 1.8 for 1meter80) ?", "HEIGHT".yellow());
         println!("{}", " * Your height (in meter) must be between 1.0 and 2.5".red());
         height = tools::input_checker_f32();
+        if height < 1.0 || height > 2.5 { println!("{}", "Please, enter a valid height...".red()); };
     }
     return height;
 }
